@@ -1,0 +1,32 @@
+{
+  "info": {
+    "name": "Lê Minh Khôi",
+    "name2": "",
+    "name_long": "a",
+    "address": "145/5",
+    "address2": "",
+    "phone": "",
+    "phone2": "abc123",
+    "city": "Hồ Chí Minh"
+  },
+  "password": {
+    "current": "123456789",
+    "current1": "02062003",
+    "current2": "0123456789",
+    "current_empty": "",
+    "new": "02062003",
+    "new_short": "123",
+    "new_empty": "",
+    "confirm": "02062003",
+    "confirm_short": "123",
+    "confirm_empty": "",
+    "confirm2": "02062003121312"
+  },
+  "message": {
+    "success": "Change password success",
+    "failed": "Password old is incorrect",
+    "failed1": "Password new is incorrect",
+    "failed2": "Password new is not match",
+    "empty": "Vui lòng điền vào trường này."
+  }
+}

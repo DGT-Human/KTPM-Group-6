@@ -1,0 +1,18 @@
+{
+    "search_tests": [
+        {"term": ["RG 17 Wing Gundam Zero EW"], "expected": ["RG 17 Wing Gundam Zero EW"]},
+        {"term": "GG", "expected": "Không tìm thấy kết quả"},
+        {"term": "", "term2": "!@#$%^&*()", "expected": "Từ khóa tìm kiếm không hợp lệ. Vui lòng chỉ nhập chữ cái hoặc số."},
+        {"term": "100", "expected": ["GN-0000GNHW7SG 00 Gundam Seven Sword/G - MG - 1/100", "00 QAN[T] Full Saber (MG - 1/100)",
+                        "00 QAN[T] MG OO 1/100 BANDAI", "AILE STRIKE GUNDAM VER.RM (MG - 1/100)",
+                        "Strike Gundam E + IWSP Lukas O'Donnell Custom - MG 1/100"]}
+    ],
+    "filter_tests": [
+      {"excepted_Low_to_High":  ["00 Gundam Seven Sword/G (HG00 - 1/144)", "00 Raiser + GN Sword III (HG - 1/144)", "Typhoeus Gundam Chimera - HG 1/144 Gundam Build Metaverse", "Destroy Gundam - HG 1/144 Gundam Seed Destiny"]},
+      {"excepted_High_to_Low":  ["Destroy Gundam - HG 1/144 Gundam Seed Destiny", "Typhoeus Gundam Chimera - HG 1/144 Gundam Build Metaverse", "00 Raiser + GN Sword III (HG - 1/144)", "00 Gundam Seven Sword/G (HG00 - 1/144)"]},
+      {"excepted_default":  ["Typhoeus Gundam Chimera - HG 1/144 Gundam Build Metaverse", "Destroy Gundam - HG 1/144 Gundam Seed Destiny", "00 Gundam Seven Sword/G (HG00 - 1/144)", "00 Raiser + GN Sword III (HG - 1/144)"]},
+      {"price_min" : "0", "price_max" : "1000000", "excepted":  ["00 Gundam Seven Sword/G (HG00 - 1/144)", "00 Raiser + GN Sword III (HG - 1/144)"]},
+      {"price_min_invalid":  "1000000", "price_max_invalid":  "1000000", "excepted": "Không tìm thấy kết quả"},
+      {"price_min_1":  "0", "price_max_1":  "1950000", "price_min_2": "0", "price_max_2": "3410000", "NotExcepted": "Không tìm thấy kết quả"}
+    ]
+}

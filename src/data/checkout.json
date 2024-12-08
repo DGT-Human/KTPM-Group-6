@@ -1,0 +1,22 @@
+{
+  "guest_invalid": {
+    "name2": "Lê Minh Khôi",
+    "name": "",
+    "address": "",
+    "phone": "",
+    "email": ""
+  },
+
+  "guest_fail": {
+    "name": "Lê Minh Khôi",
+    "name2": "a",
+    "address": "",
+    "phone": "abc123",
+    "email": "test.com"
+  },
+
+  "message": {
+    "success": "Order successful",
+    "failed": "Order failed"
+  }
+}
