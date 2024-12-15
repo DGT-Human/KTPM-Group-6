@@ -57,3 +57,52 @@ def navigate_to_list_slider(driver):
     time.sleep(1)  
     driver.find_element(By.XPATH, "/html/body/div[1]/aside/div/nav[3]/ul/li/ul/li[2]/a/i").click()    
     time.sleep(1)
+    
+def create_product(driver, name, price, sale, describe, quan):
+    driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/section[2]/div/div/div[1]/div/form/div[1]/div[1]/div[1]/div/input").send_keys(name)
+    driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/section[2]/div/div/div[1]/div/form/div[1]/div[1]/div[2]/div/select").click()    
+    time.sleep(1)  
+    driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/section[2]/div/div/div[1]/div/form/div[1]/div[1]/div[2]/div/select/option[8]").click()
+    driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/section[2]/div/div/div[1]/div/form/div[1]/div[2]/div[1]/div/input").send_keys(price)
+    driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/section[2]/div/div/div[1]/div/form/div[1]/div[2]/div[2]/div/input").send_keys(sale)
+    driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/section[2]/div/div/div[1]/div/form/div[1]/div[3]/textarea").send_keys(describe)   
+    driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/section[2]/div/div/div[1]/div/form/div[1]/div[4]/input").send_keys(quan)   
+    driver.switch_to.frame(driver.find_element(By.CLASS_NAME, 'cke_wysiwyg_frame'))
+    content_editable = driver.find_element(By.TAG_NAME, 'p')
+    content_editable.send_keys(describe)
+    driver.switch_to.default_content()
+    button = driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/section[2]/div/div/div[1]/div/form/div[2]/button")
+    driver.execute_script("arguments[0].click();", button)
+    time.sleep(5)
+    
+def add_image_product(driver, image):
+    driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/section[2]/div/div/div[1]/div/form/div[1]/div[6]/input[1]").send_keys(image)   
+    time.sleep(3)  
+    
+def create_category(driver, name, describe):
+    driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/section[2]/div/div/div[1]/div/form/div[1]/div[1]/input").send_keys(name)
+    driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/section[2]/div/div/div[1]/div/form/div[1]/div[2]/select").click()
+    time.sleep(1)  
+    driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/section[2]/div/div/div[1]/div/form/div[1]/div[2]/select/option[2]").click()
+    driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/section[2]/div/div/div[1]/div/form/div[1]/div[3]/textarea").send_keys(describe)
+    driver.switch_to.frame(driver.find_element(By.CLASS_NAME, 'cke_wysiwyg_frame'))
+    driver.find_element(By.TAG_NAME, 'p').send_keys(describe)
+    driver.switch_to.default_content()
+    button = driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/section[2]/div/div/div[1]/div/form/div[2]/button")
+    driver.execute_script("arguments[0].click();", button)
+    time.sleep(5)
+    
+def add_image_category(driver, image):
+    driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/section[2]/div/div/div[1]/div/form/div[1]/div[5]/input[1]").send_keys(image)   
+    time.sleep(3)   
+
+def create_slider(driver, name, url):
+    driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/section[2]/div/div/div[1]/div/form/div[1]/div[1]/div[1]/div/input").send_keys(name)
+    driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/section[2]/div/div/div[1]/div/form/div[1]/div[1]/div[2]/div/input").send_keys(url)
+    button = driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/section[2]/div/div/div[1]/div/form/div[2]/button")
+    driver.execute_script("arguments[0].click();", button)
+    time.sleep(5)
+    
+def add_image_slider(driver, image):
+    driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/section[2]/div/div/div[1]/div/form/div[1]/div[3]/input[1]").send_keys(image)   
+    time.sleep(3) 
